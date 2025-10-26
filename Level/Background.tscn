@@ -1,7 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci7l5phrxepg6"]
+[gd_scene load_steps=5 format=3 uid="uid://ci7l5phrxepg6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfk6w"]
 albedo_color = Color(0.44, 0.275, 0.11, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pnfku"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_o6mkr"]
+sky_material = SubResource("ProceduralSkyMaterial_pnfku")
+
+[sub_resource type="Environment" id="Environment_apigy"]
+background_mode = 1
+background_color = Color(0.06, 0.03184, 0.0072000003, 1)
+sky = SubResource("Sky_o6mkr")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="floor" type="CSGBox3D" groups=["Fail"]]
 use_collision = true
@@ -44,17 +59,17 @@ size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
 [node name="BackGroundPillar" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 7.972, 3.997, -5)
+transform = Transform3D(-0.6148494, 0.33818403, -0.71245486, -0.6092091, -0.77736264, 0.15675412, -0.50082386, 0.5304141, 0.6839856, 11.796104, 3.997, -5)
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
 [node name="BackGroundPillar2" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 5.348816, 3.997, -5)
+transform = Transform3D(-0.943329, 0.298447, -0.14512049, -0.32516718, -0.9186213, 0.22450249, -0.066308655, 0.25896803, 0.9636071, 5.53673, 3.997, -9.6459255)
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
 [node name="BackGroundPillar3" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 2.1607637, 3.997, -5)
+transform = Transform3D(0.41468278, -0.44892332, 0.79152143, 0.05645094, -0.8554696, -0.51476735, 0.9082134, 0.25814724, -0.32940632, 13.140176, 19.13953, -8.423806)
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
@@ -64,7 +79,12 @@ size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
 [node name="BackGroundPillar5" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, -4.0498023, 3.997, -5)
+transform = Transform3D(-0.07172622, -0.7625609, -0.6429281, -0.10505776, -0.6352269, 0.7651471, -0.991876, 0.12242558, -0.034550495, -11.4650345, 3.997, -7.8816185)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar6" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.069385454, -0.2930354, 0.9535808, 0.10661823, 0.9482312, 0.2991493, -0.991876, 0.12242558, -0.034550488, -4.9469986, 18.654167, -7.8816185)
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_yfk6w")
 
@@ -91,3 +111,26 @@ transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994
 height = 5.1015625
 cone = true
 material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9848077, -0.11161889, 0.13302222, 0, 0.76604444, 0.6427876, -0.17364818, -0.6330222, 0.7544065, 0, 0, 11.821226)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_apigy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6596994, 13, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.758283, 13, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8124976, 13, 0)
+omni_range = 12.0
+omni_attenuation = 0.5

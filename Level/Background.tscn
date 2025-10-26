@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci7l5phrxepg6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfk6w"]
+albedo_color = Color(0.44, 0.275, 0.11, 1)
+
+[node name="floor" type="CSGBox3D" groups=["Fail"]]
+use_collision = true
+size = Vector3(30, 8, 5)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(0.96391904, -0.26619548, 0, 0.26619548, 0.96391904, 0, 0, 0, 1, -13.626156, 8.742611, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9095629, 0.41556662, 0, -0.41556662, 0.9095629, 0, 0, 0, 1, -13.500944, 10.356552, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9095629, 0.41556662, 0, -0.41556662, 0.9095629, 0, 0, 0, 1, 14.999006, 7.2332687, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.8444029, -0.5357089, 0, 0.5357089, 0.8444029, 0, 0, 0, 1, 14.999006, 15.171613, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(0.51737005, 0.855762, 0, -0.855762, 0.51737005, 0, 0, 0, 1, -9.141363, 17.383934, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Ceiling2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.19522724, 0.9807582, 0, -0.9807582, 0.19522724, 0, 0, 0, 1, -1.2680874, 19.661331, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="Ceiling3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.2176833, 0.9760195, 0, -0.9760195, -0.2176833, 0, 0, 0, 1, 7.9716167, 20.971844, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 7.972, 3.997, -5)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 5.348816, 3.997, -5)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, 2.1607637, 3.997, -5)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar4" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, -0.885272, 3.997, -5)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="BackGroundPillar5" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.87620574, 0.4819372, 0, -0.4819372, -0.87620574, 0, 0, 0, 1, -4.0498023, 3.997, -5)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, 0, 0, 1, 0, 16.317768, -5)
+height = 10.0
+cone = true
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, 0, 0, 1, 1.1798434, 17.411676, -5)
+height = 7.8
+cone = true
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, 0, 0, 1, 2.3601944, 18.96761, -5)
+height = 4.7003174
+cone = true
+material = SubResource("StandardMaterial3D_yfk6w")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, 0, 0, 1, 3.615255, 18.766987, -5)
+height = 5.1015625
+cone = true
+material = SubResource("StandardMaterial3D_yfk6w")
